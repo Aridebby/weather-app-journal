@@ -22,7 +22,7 @@ var feel = document.getElementById('feelings').value;
       console.log(data.main.temp)
         postData('/postData',{
             temperature: data.main.temp,
-            date: newDate,
+            date: data.main.Date,
             feel: feel,
           })
     }).then((_)=>{
