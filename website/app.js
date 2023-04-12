@@ -4,8 +4,7 @@ const apiKey = '9be5289b22fc43354205811eb8896e57';
 
 // Create a new date instance dynamically with JS
 let d = new Date();
-let newDate = d.getMonth()+'.'+ d.getDate()+'.'+ d.getFullYear();
-
+let newDate = d.getMonth() + 1 + '.' + d.getDate() + '.' + d.getFullYear();
 
 var countryCode= 'US'
 
@@ -22,7 +21,7 @@ var feel = document.getElementById('feelings').value;
       console.log(data.main.temp)
         postData('/postData',{
             temperature: data.main.temp,
-            date: data.main.Date,
+            date: newDate,
             feel: feel,
           })
     }).then((_)=>{
